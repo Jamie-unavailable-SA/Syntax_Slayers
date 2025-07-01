@@ -13,6 +13,7 @@ public class FadeInOnStart : MonoBehaviour
     
     [Tooltip("Delay before starting fade in")]
     public float startDelay = 0.1f;
+    public GameObject player;
     
     private GameObject fadePanel;
     private Image fadeImage;
@@ -61,6 +62,7 @@ public class FadeInOnStart : MonoBehaviour
         
         // Fade in (from black to transparent)
         yield return StartCoroutine(FadeIn());
+        player.SetActive(true);
         
         // Clean up fade panel when done
         if (fadePanel != null)

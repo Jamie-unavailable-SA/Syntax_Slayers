@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WordManager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class WordManager : MonoBehaviour
     public GameObject prefab;
     public Transform player;
     public GameObject bullet;
+
+    public int score;
+    public Text score_text;
 
 
     public void addWord()
@@ -83,6 +87,8 @@ public class WordManager : MonoBehaviour
             hasActiveWord = false;
             words.Remove(activeWord);
             Destroy(prefab);
+            score++;
+            score_text.text = "Score: " + score;
         }
     }
 }
