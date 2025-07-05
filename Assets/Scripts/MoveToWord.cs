@@ -13,6 +13,7 @@ public class MoveToWord : MonoBehaviour
     {
         Vector3 position = new Vector3(target.transform.position.x, target.transform.position.y + -0.05f, target.transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, position, 12 * Time.deltaTime);
+      
     }
 
     private void OnTriggerEnter(Collider other)

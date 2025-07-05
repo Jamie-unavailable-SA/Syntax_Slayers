@@ -308,13 +308,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 265967061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921cca2b8955c244a9f9d42ac1fab19d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a83f2df058179343a09122ddb5be148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StopperPrefab: {fileID: 6275148374119590969, guid: 591624c0d223c6949b5a04570c7ad614, type: 3}
-  SlowdownPrefab: {fileID: 3363721451845546078, guid: 9457cfa8a4ab4474b8c82673a092522c, type: 3}
-  spawnInterval: 10
-  speed: 3
+  player: {fileID: 1422654453}
+  GameOverPanel: {fileID: 1462856170}
+  score: {fileID: 159676713}
+  gameOverSound: {fileID: 8300000, guid: afe447d6fb65b5e4eb0802fdc3aff11b, type: 3}
 --- !u!1 &606490658
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   startDelay: 0.1
-  player: {fileID: 0}
+  player: {fileID: 1422654453}
 --- !u!1 &863519625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1422654453}
   GameOverPanel: {fileID: 1462856170}
-  score: {fileID: 0}
+  score: {fileID: 159676713}
   gameOverSound: {fileID: 8300000, guid: afe447d6fb65b5e4eb0802fdc3aff11b, type: 3}
 --- !u!1 &1305701934
 GameObject:
