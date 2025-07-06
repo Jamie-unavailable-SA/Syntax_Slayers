@@ -60,6 +60,7 @@ public class RestartButton : MonoBehaviour
 
         // 2) Reload the current scene
         GameOver.gobgmusicstopper = false;
+        WordManager.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
