@@ -15,9 +15,12 @@ public class WordManager : MonoBehaviour
     public GameObject prefab;
     public Transform player;
     public GameObject bullet;
+    public AudioClip bulletshot;
+    public float bulletVolume = 1f;
 
-    public int score;
+    public static int score;
     public Text score_text;
+    public Text final_score;
 
 
     public void addWord()
@@ -43,7 +46,8 @@ public class WordManager : MonoBehaviour
         if (isActive)
         {
             prefab = Instantiate(bullet, player.position, Quaternion.identity);
-            Destroy(bullet, 1f);
+            Destroy(prefab, 1f);
+            if (bulletshot != null) AudioSource.PlayClipAtPoint(bulletshot, player.position, bulletVolume);
         }
     }
 
@@ -89,6 +93,7 @@ public class WordManager : MonoBehaviour
             Destroy(prefab);
             score++;
             score_text.text = "Score: " + score;
+            final_score.text = "Final score: " + score;
         }
     }
 }
